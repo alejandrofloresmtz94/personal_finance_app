@@ -2,7 +2,7 @@ import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 import App from './App.tsx';
 import { FirebaseAppProvider } from 'reactfire';
-import './index.css';
+import './index.scss';
 
 const {
   REACT_APP_FIREBASE_API_KEY: apiKey,
