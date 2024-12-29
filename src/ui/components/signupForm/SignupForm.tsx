@@ -4,7 +4,7 @@ import { Password } from "primereact/password";
 import { AuthComponent } from "../../../core/interfaces/auth.store.interfaces";
 import { Button } from "primereact/button";
 import { useFirebaseApp } from "reactfire";
-import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, updateProfile } from "firebase/auth";
+import { getAuth, createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
 import { Toast } from "primereact/toast";
 import useAuthStore from "../../../core/stores/authStore";
 
@@ -14,7 +14,6 @@ const SignupForm: React.FC = () => {
     const [password, setPassword] = useState<string>("");
     const toastRef = useRef<Toast>(null);
     const setShowAuthComponent = useAuthStore((state) => state.setShowAuthComponent);
-    const setUserCredential = useAuthStore((state) => state.setUserCredential);
 
     const app = useFirebaseApp();
     const auth = getAuth(app);
@@ -30,15 +29,8 @@ const SignupForm: React.FC = () => {
             updateProfile(userCredential.user, {
                 displayName: name
             }).then(() => {
-                toastRef.current?.show({ severity: 'success', summary: 'Success', detail: 'Account created successfully, redirecting. . .' });
-                setTimeout(() => {
-                    signInWithEmailAndPassword(auth, email, password).then(() => {
-                        setUserCredential(userCredential);
-                    }).catch(() => {
-                        setPassword("");
-                        toastRef.current?.show({ severity: 'error', summary: 'Error', detail: 'An error ocurred while creating your account, try again' });
-                    });
-                }, 3000);
+                toastRef.current?.show({ severity: 'success', summary: 'Success', detail: 'Account created successfully. . .' });
+                setShowAuthComponent(AuthComponent.LOGIN);
             }).catch(() => {
                 setPassword("");
                 toastRef.current?.show({ severity: 'error', summary: 'Error', detail: 'An error ocurred while creating your account, try again' });

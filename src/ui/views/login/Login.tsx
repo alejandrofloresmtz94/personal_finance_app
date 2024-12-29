@@ -1,5 +1,5 @@
 import React from "react";
-import Logo from '../../../assets/Logo.png';
+import Logo from '../../../assets/images/Logo.png';
 import LoginForm from "../../components/loginForm/LoginForm";
 import SignupForm from "../../components/signupForm/SignupForm";
 import useAuthStore from "../../../core/stores/authStore";

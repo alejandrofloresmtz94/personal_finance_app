@@ -1,0 +1,45 @@
+.ps-sidebar-container {
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 50px;
+}
+
+.ps-menu-button {
+  border-top-right-radius: 25px;
+  border-bottom-right-radius: 25px;
+
+  &:hover {
+    background-color: #f8f4f0;
+
+    span {
+      color: #000;
+    }
+  }
+}
+
+aside.ps-collapsed {
+  .ps-sidebar-container {
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+  }
+  .rotate-icon svg {
+    transform: rotate(180deg);
+  }
+}
+
+aside:not(.ps-collapsed) {
+  .ps-sidebar-container {
+    padding-right: 30px;
+  }
+}
+
+.rotate-icon svg {
+  transition-property: transform;
+  transition-duration: 1s;
+  transition-delay: 0s;
+}
+
+.ps-sidebar-container {
+  transition-property: border-top-right-radius, border-bottom-right-radius;
+  transition-duration: 1s;
+  transition-delay: 0s;
+}
