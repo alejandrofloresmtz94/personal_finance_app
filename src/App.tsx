@@ -1,8 +1,10 @@
-import React, { useEffect } from 'react';
+import React, { Suspense, useEffect } from 'react';
 import { Route, Routes, useNavigate } from "react-router";
 import { useSigninCheck } from 'reactfire';
-import './App.scss';
 import Login from './ui/views/login/Login';
+import Layout from './ui/layout/Layout';
+import AppLoading from './ui/components/appLoading/AppLoading';
+import './App.scss';
 
 const App: React.FC = () => {
 
@@ -20,15 +22,23 @@ const App: React.FC = () => {
   }, [signInCheckResult]);
 
   if (status === 'loading') {
-    return <div>Loading...</div>;
+    return <AppLoading />;
   }
 
   return (
-    <Routes>
-      <Route index element={<div>Home</div>} />
-      <Route path="/login" element={<Login />} />
-      <Route path="*" element={<div>Not Found</div>} />
-    </Routes>
+    <Suspense fallback={<AppLoading />}>
+      <Routes>
+        <Route path="/login" element={<Login />} />
+        <Route path="/" element={<Layout />}>
+          <Route index element={<h1>Dashboard</h1>} />
+          <Route path="/transactions" element={<h1>transactions</h1>} />
+          <Route path="/budgets" element={<h1>Budgets</h1>} />
+          <Route path="/pots" element={<h1>Pots</h1>} />
+          <Route path="/recurring-bills" element={<h1>Recurring Bills</h1>} />
+        </Route>
+        <Route path="*" element={<div>Not Found</div>} />
+      </Routes>
+    </Suspense>
   );
 }
 

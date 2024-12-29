@@ -9,5 +9,5 @@ export interface AuthStore {
     showAuthComponent: AuthComponent;
     setShowAuthComponent: (showLoginComponent: AuthComponent) => void;
     userCredential: UserCredential | null;
-    setUserCredential: (userCredentials: UserCredential) => void;
+    setUserCredential: (userCredentials: UserCredential | null) => void;
 }

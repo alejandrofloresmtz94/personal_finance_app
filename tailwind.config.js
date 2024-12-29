@@ -56,7 +56,7 @@ export default {
         }]
       },
       backgroundImage: {
-        'login-sigin-img': "url('/src/assets/Login_Signup_img.png')",
+        'login-sigin-img': "url('/src/assets/images/Login_Signup_img.png')",
       },
       spacing: {
         '500': '40px',
