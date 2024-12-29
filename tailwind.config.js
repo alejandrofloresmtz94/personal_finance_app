@@ -1,12 +1,11 @@
 /** @type {import('tailwindcss').Config} */
-import { theme } from './src/tailwind-theme';
-module.exports = {
+export default {
   content: [
-    './src/*/.{js,jsx,ts,tsx,mdx}',
-    './src/*/.stories.{js,jsx,ts,tsx,mdx}',
-    './.storybook/*.{js,jsx,ts,tsx,mdx}',
-    './public/index.html',
+    "./index.html",
+    "./src/**/*.{js,ts,jsx,tsx}",
   ],
-  theme,
+  theme: {
+    extend: {},
+  },
   plugins: [],
-};
+}
