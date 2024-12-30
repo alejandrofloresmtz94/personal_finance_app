@@ -4,6 +4,7 @@ import { useSigninCheck } from 'reactfire';
 import Login from './ui/views/login/Login';
 import Layout from './ui/layout/Layout';
 import AppLoading from './ui/components/appLoading/AppLoading';
+import Overview from './ui/views/overview/Overview';
 import './App.scss';
 
 const App: React.FC = () => {
@@ -30,7 +31,7 @@ const App: React.FC = () => {
       <Routes>
         <Route path="/login" element={<Login />} />
         <Route path="/" element={<Layout />}>
-          <Route index element={<h1>Dashboard</h1>} />
+          <Route index element={<Overview />} />
           <Route path="/transactions" element={<h1>transactions</h1>} />
           <Route path="/budgets" element={<h1>Budgets</h1>} />
           <Route path="/pots" element={<h1>Pots</h1>} />
