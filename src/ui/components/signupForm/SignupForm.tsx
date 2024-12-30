@@ -18,13 +18,18 @@ const SignupForm: React.FC = () => {
     const app = useFirebaseApp();
     const auth = getAuth(app);
 
-
     const onClickLogin = () => {
         setShowAuthComponent(AuthComponent.LOGIN);
     };
 
     const onSubmitSignup = (e: React.MouseEvent) => {
         e.preventDefault();
+
+        if(name.length === 0 || email.length === 0 || password.length < 8) {
+            toastRef.current?.show({ severity: 'error', summary: 'Error', detail: 'Please fill all fields correctly' });
+            return;
+        }
+
         createUserWithEmailAndPassword(auth, email, password).then((userCredential) => {
             updateProfile(userCredential.user, {
                 displayName: name
