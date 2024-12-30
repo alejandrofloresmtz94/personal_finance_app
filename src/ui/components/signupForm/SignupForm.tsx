@@ -52,11 +52,11 @@ const SignupForm: React.FC = () => {
             <span className="text-preset-1">Sign Up</span>
             <div className="flex flex-col gap-2">
                 <label htmlFor="name" className="font-bold text-preset-5">Name</label>
-                <InputText id="name" className="w-full px-2 border border-black h-11 focus:shadow-black" value={name} onChange={(e: ChangeEvent<HTMLInputElement>) => setName(e.target.value)} />
+                <InputText id="name" className="w-full px-2 border border-black h-11 focus:shadow-black focus:border-none" value={name} onChange={(e: ChangeEvent<HTMLInputElement>) => setName(e.target.value)} />
             </div>
             <div className="flex flex-col gap-2">
                 <label htmlFor="email" className="font-bold text-preset-5">Email</label>
-                <InputText id="email" className="w-full px-2 border border-black h-11 focus:shadow-black" value={email} onChange={(e: ChangeEvent<HTMLInputElement>) => setEmail(e.target.value)} />
+                <InputText id="email" className="w-full px-2 border border-black h-11 focus:shadow-black focus:border-none" value={email} onChange={(e: ChangeEvent<HTMLInputElement>) => setEmail(e.target.value)} />
             </div>
             <div className="flex flex-col gap-2">
                 <label htmlFor="password" className="font-bold text-preset-5">Create Password</label>
