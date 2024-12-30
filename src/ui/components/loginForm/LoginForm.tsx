@@ -24,6 +24,12 @@ const LoginForm: React.FC = () => {
 
     const onSubmitLogin = (e: React.MouseEvent) => {
         e.preventDefault();
+
+        if(email.length === 0 || password.length < 8) {
+            toastRef.current?.show({ severity: 'error', summary: 'Error', detail: 'Please fill all fields correctly' });
+            return;
+        }
+
         signInWithEmailAndPassword(auth, email, password).then((userCredential) => {
             setUserCredential(userCredential);
         }).catch(() => {
