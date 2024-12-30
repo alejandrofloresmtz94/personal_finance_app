@@ -63,7 +63,7 @@ const Layout: React.FC = () => {
                         </Menu>
                     </div>
                 </Sidebar>
-                <div className='w-full h-full px-10 py-10 bg-beige-100'>
+                <div className='w-full h-full px-10 py-10 overflow-y-scroll'>
                     <Outlet />
                 </div>
             </div>
