@@ -1,0 +1,82 @@
+[
+    {
+        "id": 1,
+        "person": "Emma Richardson",
+        "amount": 75.5,
+        "transactionType": "income",
+        "category": "General",
+        "date": "19 Aug 2024"
+    },
+    {
+        "id": 2,
+        "person": "Savory Bites Bistro",
+        "amount": 55.5,
+        "transactionType": "expense",
+        "category": "Dining Out",
+        "date": "19 Aug 2024"
+    },
+    {
+        "id": 3,
+        "person": "Daniel Carter",
+        "amount": 42.3,
+        "transactionType": "expense",
+        "category": "General",
+        "date": "18 Aug 2024"
+    },
+    {
+        "id": 4,
+        "person": "Sun Park",
+        "amount": 120.0,
+        "transactionType": "income",
+        "category": "General",
+        "date": "17 Aug 2024"
+    },
+    {
+        "id": 5,
+        "person": "Urban Services Hub",
+        "amount": 65.0,
+        "transactionType": "expense",
+        "category": "General",
+        "date": "17 Aug 2024"
+    },
+    {
+        "id": 6,
+        "person": "Liam Hughes",
+        "amount": 65.75,
+        "transactionType": "income",
+        "category": "Groceries",
+        "date": "15 Aug 2024"
+    },
+    {
+        "id": 7,
+        "person": "Lily Ramirez",
+        "amount": 50.0,
+        "transactionType": "income",
+        "category": "General",
+        "date": "14 Aug 2024"
+    },
+    {
+        "id": 8,
+        "person": "Ethan Clark",
+        "amount": 32.5,
+        "transactionType": "expense",
+        "category": "Dining Out",
+        "date": "13 Aug 2024"
+    },
+    {
+        "id": 9,
+        "person": "James Thompson",
+        "amount": 5.0,
+        "transactionType": "expense",
+        "category": "Entertainment",
+        "date": "11 Aug 2024"
+    },
+    {
+        "id": 10,
+        "person": "Pixel Playground",
+        "amount": 10.0,
+        "transactionType": "expense",
+        "category": "Entertainment",
+        "date": "11 Aug 2024"
+    }
+]

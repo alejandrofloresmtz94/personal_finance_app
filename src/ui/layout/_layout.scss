@@ -3,6 +3,16 @@
   border-bottom-right-radius: 50px;
 }
 
+.ps-menuitem-root.active {
+  .ps-menu-button {
+    background-color: #f8f4f0;
+
+    span {
+      color: #000;
+    }
+  }
+}
+
 .ps-menu-button {
   border-top-right-radius: 25px;
   border-bottom-right-radius: 25px;
